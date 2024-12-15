@@ -66,3 +66,5 @@ function distributionOfCandy(candies){
   }
   return [n,arr[0]]; 
 }
+
+// or
