@@ -54,3 +54,6 @@ So, we need return: [17,18]
 
 distributionOfCandy([10,2,8,22,16,4,10,6,14,20]) === [17,18]
 */
+
+
+// Solution
