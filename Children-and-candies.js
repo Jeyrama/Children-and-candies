@@ -57,3 +57,12 @@ distributionOfCandy([10,2,8,22,16,4,10,6,14,20]) === [17,18]
 
 
 // Solution
+
+function distributionOfCandy(candies){
+  let n = 0, arr = candies.slice(), l = candies.length;
+  while(arr.some( c => c !== arr[0] ) ){
+    arr = arr.map( (c,i,a) => Math.floor(-~c/2) + Math.floor(-~arr[(l+~-i)%l]/2) );
+    n += 1;
+  }
+  return [n,arr[0]]; 
+}
