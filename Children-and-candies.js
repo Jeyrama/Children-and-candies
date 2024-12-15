@@ -68,3 +68,15 @@ function distributionOfCandy(candies){
 }
 
 // or
+
+function distributionOfCandy(candies){ 	
+	let count = 0, length = candies.length
+
+	while (candies.filter(x=>x!=candies[0]).length) {
+		count += 1
+		candies = candies.map(x=>x%2?++x/2:x/2)
+		let give = [candies[length-1]].concat( candies.slice(0, length-1) )
+		give.map((x,i)=>candies[i]+=x)
+	}	
+	return [count, candies[0]]
+}
